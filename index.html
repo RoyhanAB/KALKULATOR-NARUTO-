@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Naruto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 class="header-logo">Naruto Calc</h1>
+    </header>
+
+    <!-- Audio element for background sound -->
+    <audio id="background-audio" autoplay loop>
+        <source src="backsound.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="overlay"></div>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="calculator card shadow-lg p-3 mb-5 bg-body rounded">
+            <table class="table table-bordered text-center">
+                <tr>
+                    <td colspan="4"><input type="text" id="display" class="form-control text-end" disabled></td>
+                </tr>
+                <tr>
+                    <td><button class="btn btn-danger" onclick="clearDisplay()">C</button></td>
+                    <td><button class="btn btn-secondary" onclick="appendCharacter('/')">/</button></td>
+                    <td><button class="btn btn-secondary" onclick="appendCharacter('*')">*</button></td>
+                    <td><button class="btn btn-secondary" onclick="deleteLast()">←</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn btn-light" onclick="appendCharacter('7')">7</button></td>
+                    <td><button class="btn btn-light" onclick="appendCharacter('8')">8</button></td>
+                    <td><button class="btn btn-light" onclick="appendCharacter('9')">9</button></td>
+                    <td><button class="btn btn-secondary" onclick="appendCharacter('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn btn-light" onclick="appendCharacter('4')">4</button></td>
+                    <td><button class="btn btn-light" onclick="appendCharacter('5')">5</button></td>
+                    <td><button class="btn btn-light" onclick="appendCharacter('6')">6</button></td>
+                    <td><button class="btn btn-secondary" onclick="appendCharacter('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn btn-light" onclick="appendCharacter('1')">1</button></td>
+                    <td><button class="btn btn-light" onclick="appendCharacter('2')">2</button></td>
+                    <td><button class="btn btn-light" onclick="appendCharacter('3')">3</button></td>
+                    <td rowspan="2"><button class="btn btn-success" onclick="calculateResult()">=</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button class="btn btn-light" onclick="appendCharacter('0')">0</button></td>
+                    <td><button class="btn btn-light" onclick="appendCharacter('.')">.</button></td>
+                </tr>
+            </table>
+            <!-- Tempat untuk logo klan ninja -->
+            <img src="klan.png" alt="Logo Klan Ninja" class="watermark">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

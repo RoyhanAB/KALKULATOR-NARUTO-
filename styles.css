@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-image: url('gifnaruto.gif'); /* Background GIF */
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.header-logo {
+    color: white;
+    font-size: 24px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparansi untuk menonjolkan kalkulator */
+    z-index: -1;
+}
+
+.calculator {
+    background-color: #ff9900;
+    border-radius: 20px;
+    padding: 20px;
+    width: 280px; /* Lebar kalkulator diatur agar lebih kecil */
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.8);
+    position: relative;
+    top: 100px; /* Menyesuaikan dengan header */
+}
+
+input#display {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    height: 50px; /* Lebih kecil agar proporsional */
+    font-size: 20px;
+    text-align: right;
+    padding-right: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    font-size: 18px;
+    height: 50px;
+    width: 100%;
+    margin: 5px 0;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(255, 255, 0, 0.6);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 4px 6px rgba(255, 255, 0, 0.4);
+}
+
+.btn-danger {
+    background-color: #d9534f;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #5bc0de;
+    color: white;
+}
+
+.btn-light {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.btn-success {
+    background-color: #5cb85c;
+    color: white;
+}
+
+.watermark {
+    position: absolute;
+    bottom: 10px; /* Jarak dari bawah kalkulator */
+    left: 10px; /* Jarak dari kiri kalkulator */
+    opacity: 0.5; /* Transparansi logo */
+    width: 50px; /* Atur ukuran logo */
+}
+
+@media (max-width: 600px) {
+    .calculator {
+        width: 90%;
+        padding: 10px;
+        font-size: 16px;
+    }
+    input#display {
+        height: 40px;
+        font-size: 18px;
+    }
+    button {
+        height: 40px;
+        font-size: 16px;
+    }
+}
