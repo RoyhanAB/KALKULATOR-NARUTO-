@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', cursive;
+  background: url('gifnaruto.gif') no-repeat center center/cover;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.header-logo {
+  color: white;
+  font-size: 22px;
+}
+
+#audio-toggle {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  background-color: #ffc107;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(0,0,0,0.4);
+  z-index: 10;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 0;
+}
+
+.main-wrapper {
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 90vh;
+}
+
+.calculator {
+  background: white;
+  padding: 20px 20px 30px 20px;
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 2;
+}
+
+input#display {
+  background-color: #333;
+  color: white;
+  border: none;
+  height: 50px;
+  font-size: 18px;
+  padding: 5px 10px;
+  text-align: right;
+}
+
+button {
+  font-size: 18px;
+  height: 50px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  margin: 5px 0;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #ffe600;
+}
+
+.btn-danger { background-color: #d9534f; color: white; }
+.btn-secondary { background-color: #5bc0de; color: white; }
+.btn-light { background-color: #f8f9fa; color: #333; }
+.btn-success { background-color: #5cb85c; color: white; }
+
+.creator-tag {
+  font-size: 8px;
+  color: #999;
+  text-align: right;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.watermark {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  opacity: 0.5;
+  width: 50px;
+}
+
+.history-list {
+  font-size: 11px;
+  list-style: none;
+  padding-left: 10px;
+  margin-top: 10px;
+  color: #444;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.naruto-quote {
+  font-size: 11px;
+  color: #333;
+  font-style: italic;
+  text-align: center;
+  margin-top: 12px;
+  padding: 0 5px;
+}

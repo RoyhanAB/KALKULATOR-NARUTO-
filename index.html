@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naruto Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1 class="header-logo">Naruto Calculator</h1>
+  </header>
+
+  <div id="audio-toggle" onclick="toggleAudio()">🔈</div>
+
+  <audio id="background-audio" autoplay loop>
+    <source src="backsound.mp3" type="audio/mpeg" />
+  </audio>
+
+  <div class="overlay"></div>
+
+  <main class="main-wrapper">
+    <div class="calculator card">
+      <input type="text" id="display" class="form-control text-end mb-2" value="0" disabled />
+
+      <table class="table table-borderless text-center">
+        <tr>
+          <td><button class="btn btn-danger" onclick="clearDisplay()">C</button></td>
+          <td><button class="btn btn-secondary" onclick="appendCharacter('/')">/</button></td>
+          <td><button class="btn btn-secondary" onclick="appendCharacter('*')">*</button></td>
+          <td><button class="btn btn-secondary" onclick="deleteLast()">←</button></td>
+        </tr>
+        <tr>
+          <td><button class="btn btn-light" onclick="appendCharacter('7')">7</button></td>
+          <td><button class="btn btn-light" onclick="appendCharacter('8')">8</button></td>
+          <td><button class="btn btn-light" onclick="appendCharacter('9')">9</button></td>
+          <td><button class="btn btn-secondary" onclick="appendCharacter('-')">-</button></td>
+        </tr>
+        <tr>
+          <td><button class="btn btn-light" onclick="appendCharacter('4')">4</button></td>
+          <td><button class="btn btn-light" onclick="appendCharacter('5')">5</button></td>
+          <td><button class="btn btn-light" onclick="appendCharacter('6')">6</button></td>
+          <td><button class="btn btn-secondary" onclick="appendCharacter('+')">+</button></td>
+        </tr>
+        <tr>
+          <td><button class="btn btn-light" onclick="appendCharacter('1')">1</button></td>
+          <td><button class="btn btn-light" onclick="appendCharacter('2')">2</button></td>
+          <td><button class="btn btn-light" onclick="appendCharacter('3')">3</button></td>
+          <td rowspan="2"><button class="btn btn-success w-100 h-100" onclick="calculateResult()">=</button></td>
+        </tr>
+        <tr>
+          <td colspan="2"><button class="btn btn-light w-100" onclick="appendCharacter('0')">0</button></td>
+          <td><button class="btn btn-light" onclick="appendCharacter('.')">.</button></td>
+        </tr>
+      </table>
+
+      <img src="klan.png" alt="Logo Klan" class="watermark" />
+      <p class="creator-tag">By Roy</p>
+      <p id="quote" class="naruto-quote text-center mt-2"></p>
+      <ul id="history" class="history-list mt-2"></ul>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
